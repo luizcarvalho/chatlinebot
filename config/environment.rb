@@ -1,7 +1,2 @@
-if ENV['RACK_ENV'] == 'development'
-  Bundler.require(:default, :development)
-else
-  Bundler.require(:default, :production)
-end
-
 require 'sinatra'
+require 'dotenv/load'
