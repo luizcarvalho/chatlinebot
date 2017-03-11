@@ -1,7 +1,7 @@
 require './app'
 require_relative 'bot'
 
-map('/listen') do
+map('/webhook') do
   run Sinatra::Application
   run Facebook::Messenger::Server
 end

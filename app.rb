@@ -1,4 +1,4 @@
-require 'sinatra'
+require './config/environment'
 
 get '/webhook' do
   if params['hub.verify_token'] == ENV['VERIFY_TOKEN']
