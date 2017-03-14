@@ -10,15 +10,19 @@ module FirebaseHelper
     @firebase ||= Firebase::Client.new(ENV['FB_DATABASEURL'], ENV['FB_PRIVATE_KEY'])
   end
 
+  def forward(message)
+    alerted = false
+    alerted = alert_team if new_message?
+    store(message)
+    alerted
+  end
+
   def new_message?
     last_message = request_last_message
     return false unless last_message
 
     current_time = time_now
     limit_time = calculate_limit_time(last_message)
-    puts" current_time: #{current_time} > limit_time: #{limit_time} "
-    puts" difference: #{current_time - limit_time}"
-    puts" 5minutes: #{TIME_TO_NEW_MESSAGE}"
     current_time > limit_time
   end
 
@@ -33,6 +37,7 @@ module FirebaseHelper
 
   def alert_team
     puts 'messagem sended to Slack Team'
+    true
   end
 
   def store(message)
