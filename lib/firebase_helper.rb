@@ -14,6 +14,7 @@ module FirebaseHelper
     alerted = false
     alerted = alert_team if new_message?
     store(message)
+    puts 'Message stored'
     alerted
   end
 
@@ -41,8 +42,20 @@ module FirebaseHelper
   end
 
   def store(message)
-    response = client.push('messages', simplify_data(message))
+    push('messages', simplify_data(message))
+  end
+
+  def push(namespace, data)
+    response = client.push(namespace, data)
     puts response.body unless response.success?
+  end
+
+  def set(namespace, data, query = nil)
+    client.set(namespace, data, query)
+  end
+
+  def get(namespace, query = nil)
+    client.get(namespace, query)
   end
 
   def simplify_data(message)
