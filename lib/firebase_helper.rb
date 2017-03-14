@@ -50,11 +50,15 @@ module FirebaseHelper
     puts response.body unless response.success?
   end
 
-  def set(namespace, data, query = nil)
+  def set(namespace, data, query = {})
     client.set(namespace, data, query)
   end
 
-  def get(namespace, query = nil)
+  def update(namespace, data, query = {})
+    client.update(namespace, data, query)
+  end
+
+  def pull(namespace, query = {})
     client.get(namespace, query)
   end
 

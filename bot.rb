@@ -3,14 +3,20 @@ require 'json'
 require 'dotenv/load'
 require 'pry'
 require './lib/firebase_helper'
+require './lib/configuration'
 
 include Facebook::Messenger
 include FirebaseHelper
+include Configuration
 
 Facebook::Messenger::Subscriptions.subscribe(access_token: ENV['ACCESS_TOKEN'])
 
 Bot.on :message do |message|
-  if forward(message.messaging)
+  configuration_message = configuration_message(message.messaging)
+
+  message.reply(text: configuration_response) if configuration_message
+
+  if !configuration_message && forward(message.messaging)
     message.reply(text: welcome_message)
   end
 end
