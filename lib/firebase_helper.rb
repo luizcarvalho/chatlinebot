@@ -2,8 +2,6 @@ require 'firebase'
 require_relative './slack'
 
 module FirebaseHelper
-  include Slack
-
   MINUTES_INTERVAL = 1
   TIME_TO_NEW_MESSAGE = MINUTES_INTERVAL * 60
 
@@ -15,7 +13,6 @@ module FirebaseHelper
     alerted = false
     alerted = alert_team if new_message?
     store(message)
-    puts 'Message stored'
     alerted
   end
 
@@ -25,6 +22,7 @@ module FirebaseHelper
 
     current_time = time_now
     limit_time = calculate_limit_time(last_message)
+    puts "limit_time #{Time.at current_time} > #{Time.at limit_time}"
     current_time > limit_time
   end
 
@@ -39,7 +37,7 @@ module FirebaseHelper
 
   def alert_team
     begin
-      response = send_webhook
+      Slack.send_webhook
     rescue
       false
     end
@@ -47,7 +45,9 @@ module FirebaseHelper
   end
 
   def store(message)
-    push('messages', simplify_data(message))
+    simplified_message = simplify_data(message)
+    push('messages', simplified_message)
+    puts "Message stored #{simplified_message}"
   end
 
   def push(namespace, data)
