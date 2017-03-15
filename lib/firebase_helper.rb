@@ -1,7 +1,8 @@
 require 'firebase'
+require_relative './slack'
 
 module FirebaseHelper
-  
+  include Slack
 
   MINUTES_INTERVAL = 1
   TIME_TO_NEW_MESSAGE = MINUTES_INTERVAL * 60
@@ -37,7 +38,11 @@ module FirebaseHelper
   end
 
   def alert_team
-    puts 'messagem sended to Slack Team'
+    begin
+      response = send_webhook
+    rescue
+      false
+    end
     true
   end
 
