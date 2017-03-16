@@ -1,0 +1,311 @@
+# Logfile created on 2017-03-16 18:31:55 -0300 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-16 18:31:55 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f5f8c753] Running /usr/bin/env mkdir -p /tmp as root@http
+ DEBUG [f5f8c753] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-16 18:32:53 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7a4b0508] Running /usr/bin/env mkdir -p /tmp as root@104.236.79.184
+ DEBUG [7a4b0508] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7a4b0508] Finished in 2.505 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 0.0%
+  INFO Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 100.0%
+  INFO [c590a458] Running /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh as root@104.236.79.184
+ DEBUG [c590a458] Command: /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh
+  INFO [c590a458] Finished in 0.374 seconds with exit status 0 (successful).
+  INFO [7a504f6b] Running /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD as root@104.236.79.184
+ DEBUG [7a504f6b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD )
+ DEBUG [7a504f6b] 	33aaacfbebbc5773f248f05e79fa5ed9f425cc6c	HEAD
+  INFO [7a504f6b] Finished in 2.719 seconds with exit status 0 (successful).
+  INFO [6c39b4ae] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases as root@104.236.79.184
+ DEBUG [6c39b4ae] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases
+  INFO [6c39b4ae] Finished in 0.375 seconds with exit status 0 (successful).
+  INFO [f63b5a7f] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared as root@104.236.79.184
+ DEBUG [f63b5a7f] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared
+  INFO [f63b5a7f] Finished in 0.373 seconds with exit status 0 (successful).
+ DEBUG [63f32953] Running [ -f /var/www/chatlinebot/shared/.env ] as root@104.236.79.184
+ DEBUG [63f32953] Command: [ -f /var/www/chatlinebot/shared/.env ]
+ DEBUG [63f32953] Finished in 0.370 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/chatlinebot/shared/.env does not exist on 104.236.79.184
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-16 18:34:22 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7aa792fe] Running /usr/bin/env mkdir -p /tmp as root@104.236.79.184
+ DEBUG [7aa792fe] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7aa792fe] Finished in 2.512 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 0.0%
+  INFO Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 100.0%
+  INFO [ef83a8b8] Running /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh as root@104.236.79.184
+ DEBUG [ef83a8b8] Command: /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh
+  INFO [ef83a8b8] Finished in 0.372 seconds with exit status 0 (successful).
+  INFO [1657babb] Running /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD as root@104.236.79.184
+ DEBUG [1657babb] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD )
+ DEBUG [1657babb] 	33aaacfbebbc5773f248f05e79fa5ed9f425cc6c	HEAD
+  INFO [1657babb] Finished in 2.650 seconds with exit status 0 (successful).
+  INFO [1035ef2d] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases as root@104.236.79.184
+ DEBUG [1035ef2d] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases
+  INFO [1035ef2d] Finished in 0.387 seconds with exit status 0 (successful).
+  INFO [4e9a2b8b] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared as root@104.236.79.184
+ DEBUG [4e9a2b8b] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared
+  INFO [4e9a2b8b] Finished in 0.392 seconds with exit status 0 (successful).
+ DEBUG [b06b8fcf] Running [ -f /var/www/chatlinebot/shared/.env ] as root@104.236.79.184
+ DEBUG [b06b8fcf] Command: [ -f /var/www/chatlinebot/shared/.env ]
+ DEBUG [b06b8fcf] Finished in 0.388 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/chatlinebot/shared/.env does not exist on 104.236.79.184
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-16 18:35:22 -0300 cap production deploy:setup
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-16 18:38:54 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [3ab62c54] Running /usr/bin/env mkdir -p /tmp as root@104.236.79.184
+ DEBUG [3ab62c54] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3ab62c54] Finished in 2.254 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 0.0%
+  INFO Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 100.0%
+  INFO [b34fa1a9] Running /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh as root@104.236.79.184
+ DEBUG [b34fa1a9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh
+  INFO [b34fa1a9] Finished in 0.360 seconds with exit status 0 (successful).
+  INFO [03abc69b] Running /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD as root@104.236.79.184
+ DEBUG [03abc69b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD )
+ DEBUG [03abc69b] 	33aaacfbebbc5773f248f05e79fa5ed9f425cc6c	HEAD
+  INFO [03abc69b] Finished in 2.980 seconds with exit status 0 (successful).
+  INFO [11c95794] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases as root@104.236.79.184
+ DEBUG [11c95794] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases
+  INFO [11c95794] Finished in 0.405 seconds with exit status 0 (successful).
+  INFO [2aca19ab] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared as root@104.236.79.184
+ DEBUG [2aca19ab] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared
+  INFO [2aca19ab] Finished in 0.412 seconds with exit status 0 (successful).
+ DEBUG [2468f5c6] Running [ -f /var/www/chatlinebot/shared/.env ] as root@104.236.79.184
+ DEBUG [2468f5c6] Command: [ -f /var/www/chatlinebot/shared/.env ]
+ DEBUG [2468f5c6] Finished in 0.407 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/chatlinebot/shared/.env does not exist on 104.236.79.184
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-16 18:48:30 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [79591b75] Running /usr/bin/env mkdir -p /tmp as root@104.236.79.184
+ DEBUG [79591b75] Command: /usr/bin/env mkdir -p /tmp
+  INFO [79591b75] Finished in 2.328 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 0.0%
+  INFO Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 100.0%
+  INFO [3fb4da51] Running /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh as root@104.236.79.184
+ DEBUG [3fb4da51] Command: /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh
+  INFO [3fb4da51] Finished in 0.376 seconds with exit status 0 (successful).
+  INFO [0004e60f] Running /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD as root@104.236.79.184
+ DEBUG [0004e60f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD )
+ DEBUG [0004e60f] 	33aaacfbebbc5773f248f05e79fa5ed9f425cc6c	HEAD
+  INFO [0004e60f] Finished in 2.723 seconds with exit status 0 (successful).
+  INFO [6f0338c9] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases as root@104.236.79.184
+ DEBUG [6f0338c9] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases
+  INFO [6f0338c9] Finished in 0.402 seconds with exit status 0 (successful).
+  INFO [086255c7] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared as root@104.236.79.184
+ DEBUG [086255c7] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared
+  INFO [086255c7] Finished in 0.400 seconds with exit status 0 (successful).
+ DEBUG [69ddc647] Running [ -f /var/www/chatlinebot/shared/.env ] as root@104.236.79.184
+ DEBUG [69ddc647] Command: [ -f /var/www/chatlinebot/shared/.env ]
+ DEBUG [69ddc647] Finished in 0.404 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/chatlinebot/shared/.env does not exist on 104.236.79.184
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-16 18:49:33 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e31f93d0] Running /usr/bin/env mkdir -p /tmp as root@104.236.79.184
+ DEBUG [e31f93d0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e31f93d0] Finished in 2.497 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 0.0%
+  INFO Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 100.0%
+  INFO [bce9ed94] Running /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh as root@104.236.79.184
+ DEBUG [bce9ed94] Command: /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh
+  INFO [bce9ed94] Finished in 0.358 seconds with exit status 0 (successful).
+  INFO [db842312] Running /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD as root@104.236.79.184
+ DEBUG [db842312] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD )
+ DEBUG [db842312] 	33aaacfbebbc5773f248f05e79fa5ed9f425cc6c	HEAD
+  INFO [db842312] Finished in 2.581 seconds with exit status 0 (successful).
+  INFO [64b3bced] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases as root@104.236.79.184
+ DEBUG [64b3bced] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases
+  INFO [64b3bced] Finished in 0.381 seconds with exit status 0 (successful).
+  INFO [cc81ffc2] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared as root@104.236.79.184
+ DEBUG [cc81ffc2] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared
+  INFO [cc81ffc2] Finished in 0.379 seconds with exit status 0 (successful).
+ DEBUG [7d25d0c5] Running [ -f /var/www/chatlinebot/shared/.env ] as root@104.236.79.184
+ DEBUG [7d25d0c5] Command: [ -f /var/www/chatlinebot/shared/.env ]
+ DEBUG [7d25d0c5] Finished in 0.381 seconds with exit status 0 (successful).
+ DEBUG [56f263c2] Running [ -f /var/www/chatlinebot/current/REVISION ] as root@104.236.79.184
+ DEBUG [56f263c2] Command: [ -f /var/www/chatlinebot/current/REVISION ]
+ DEBUG [56f263c2] Finished in 0.377 seconds with exit status 1 (failed).
+ DEBUG [df39102e] Running [ -f /var/www/chatlinebot/repo/HEAD ] as root@104.236.79.184
+ DEBUG [df39102e] Command: [ -f /var/www/chatlinebot/repo/HEAD ]
+ DEBUG [df39102e] Finished in 0.378 seconds with exit status 1 (failed).
+ DEBUG [e7ee772e] Running if test ! -d /var/www/chatlinebot/; then echo "Directory does not exist '/var/www/chatlinebot/'" 1>&2; false; fi as root@104.236.79.184
+ DEBUG [e7ee772e] Command: if test ! -d /var/www/chatlinebot/; then echo "Directory does not exist '/var/www/chatlinebot/'" 1>&2; false; fi
+ DEBUG [e7ee772e] Finished in 0.379 seconds with exit status 0 (successful).
+  INFO [53abb407] Running /usr/bin/env git clone --mirror https://github.com/luizcarvalho/chatlinebot /var/www/chatlinebot/repo as root@104.236.79.184
+ DEBUG [53abb407] Command: cd /var/www/chatlinebot/ && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git clone --mirror https://github.com/luizcarvalho/chatlinebot /var/www/chatlinebot/repo )
+ DEBUG [53abb407] 	Cloning into bare repository '/var/www/chatlinebot/repo'...
+  INFO [53abb407] Finished in 0.669 seconds with exit status 0 (successful).
+ DEBUG [acf61204] Running if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi as root@104.236.79.184
+ DEBUG [acf61204] Command: if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi
+ DEBUG [acf61204] Finished in 0.379 seconds with exit status 0 (successful).
+  INFO [0ec29f87] Running /usr/bin/env git remote set-url origin https://github.com/luizcarvalho/chatlinebot as root@104.236.79.184
+ DEBUG [0ec29f87] Command: cd /var/www/chatlinebot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git remote set-url origin https://github.com/luizcarvalho/chatlinebot )
+  INFO [0ec29f87] Finished in 0.380 seconds with exit status 0 (successful).
+  INFO [d6b475ad] Running /usr/bin/env git remote update --prune as root@104.236.79.184
+ DEBUG [d6b475ad] Command: cd /var/www/chatlinebot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d6b475ad] 	Fetching origin
+  INFO [d6b475ad] Finished in 0.583 seconds with exit status 0 (successful).
+ DEBUG [c9328a55] Running if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi as root@104.236.79.184
+ DEBUG [c9328a55] Command: if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi
+ DEBUG [c9328a55] Finished in 0.380 seconds with exit status 0 (successful).
+  INFO [3526bc07] Running /usr/bin/env mkdir -p /var/www/chatlinebot/releases/20170316214943 as root@104.236.79.184
+ DEBUG [3526bc07] Command: cd /var/www/chatlinebot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env mkdir -p /var/www/chatlinebot/releases/20170316214943 )
+  INFO [3526bc07] Finished in 0.385 seconds with exit status 0 (successful).
+  INFO [bfe96b1d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/chatlinebot/releases/20170316214943 as root@104.236.79.184
+ DEBUG [bfe96b1d] Command: cd /var/www/chatlinebot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/chatlinebot/releases/20170316214943 )
+  INFO [bfe96b1d] Finished in 0.392 seconds with exit status 0 (successful).
+ DEBUG [795ee33c] Running if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi as root@104.236.79.184
+ DEBUG [795ee33c] Command: if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi
+ DEBUG [795ee33c] Finished in 0.381 seconds with exit status 0 (successful).
+ DEBUG [a8ec8a01] Running /usr/bin/env git rev-list --max-count=1 master as root@104.236.79.184
+ DEBUG [a8ec8a01] Command: cd /var/www/chatlinebot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [a8ec8a01] 	33aaacfbebbc5773f248f05e79fa5ed9f425cc6c
+ DEBUG [a8ec8a01] Finished in 0.379 seconds with exit status 0 (successful).
+ DEBUG [319761de] Running if test ! -d /var/www/chatlinebot/releases/20170316214943; then echo "Directory does not exist '/var/www/chatlinebot/releases/20170316214943'" 1>&2; false; fi as root@104.236.79.184
+ DEBUG [319761de] Command: if test ! -d /var/www/chatlinebot/releases/20170316214943; then echo "Directory does not exist '/var/www/chatlinebot/releases/20170316214943'" 1>&2; false; fi
+ DEBUG [319761de] Finished in 0.381 seconds with exit status 0 (successful).
+  INFO [d029676e] Running /usr/bin/env echo "33aaacfbebbc5773f248f05e79fa5ed9f425cc6c" >> REVISION as root@104.236.79.184
+ DEBUG [d029676e] Command: cd /var/www/chatlinebot/releases/20170316214943 && /usr/bin/env echo "33aaacfbebbc5773f248f05e79fa5ed9f425cc6c" >> REVISION
+  INFO [d029676e] Finished in 0.386 seconds with exit status 0 (successful).
+  INFO [9005e235] Running /usr/bin/env mkdir -p /var/www/chatlinebot/releases/20170316214943 as root@104.236.79.184
+ DEBUG [9005e235] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/releases/20170316214943
+  INFO [9005e235] Finished in 0.379 seconds with exit status 0 (successful).
+ DEBUG [4ff2c693] Running [ -L /var/www/chatlinebot/releases/20170316214943/.env ] as root@104.236.79.184
+ DEBUG [4ff2c693] Command: [ -L /var/www/chatlinebot/releases/20170316214943/.env ]
+ DEBUG [4ff2c693] Finished in 0.378 seconds with exit status 1 (failed).
+ DEBUG [c55c86a7] Running [ -f /var/www/chatlinebot/releases/20170316214943/.env ] as root@104.236.79.184
+ DEBUG [c55c86a7] Command: [ -f /var/www/chatlinebot/releases/20170316214943/.env ]
+ DEBUG [c55c86a7] Finished in 0.379 seconds with exit status 1 (failed).
+  INFO [08d9a71f] Running /usr/bin/env ln -s /var/www/chatlinebot/shared/.env /var/www/chatlinebot/releases/20170316214943/.env as root@104.236.79.184
+ DEBUG [08d9a71f] Command: /usr/bin/env ln -s /var/www/chatlinebot/shared/.env /var/www/chatlinebot/releases/20170316214943/.env
+  INFO [08d9a71f] Finished in 0.381 seconds with exit status 0 (successful).
+ DEBUG [1a4d4b23] Running if test ! -d /var/www/chatlinebot/releases/20170316214943; then echo "Directory does not exist '/var/www/chatlinebot/releases/20170316214943'" 1>&2; false; fi as root@104.236.79.184
+ DEBUG [1a4d4b23] Command: if test ! -d /var/www/chatlinebot/releases/20170316214943; then echo "Directory does not exist '/var/www/chatlinebot/releases/20170316214943'" 1>&2; false; fi
+ DEBUG [1a4d4b23] Finished in 0.380 seconds with exit status 0 (successful).
+ DEBUG [c85a9015] Running /usr/bin/env bundle check --path /var/www/chatlinebot/shared/bundle as root@104.236.79.184
+ DEBUG [c85a9015] Command: cd /var/www/chatlinebot/releases/20170316214943 && /usr/bin/env bundle check --path /var/www/chatlinebot/shared/bundle
+ DEBUG [c85a9015] 	/usr/bin/env: 
+ DEBUG [c85a9015] 	'bundle'
+ DEBUG [c85a9015] 	: No such file or directory
+ DEBUG [c85a9015] 	
+ DEBUG [c85a9015] Finished in 0.387 seconds with exit status 127 (failed).
+  INFO [b47ad78d] Running /usr/bin/env bundle install --path /var/www/chatlinebot/shared/bundle --without development test --deployment --quiet as root@104.236.79.184
+ DEBUG [b47ad78d] Command: cd /var/www/chatlinebot/releases/20170316214943 && /usr/bin/env bundle install --path /var/www/chatlinebot/shared/bundle --without development test --deployment --quiet
+ DEBUG [b47ad78d] 	/usr/bin/env: 
+ DEBUG [b47ad78d] 	'bundle'
+ DEBUG [b47ad78d] 	: No such file or directory
+ DEBUG [b47ad78d] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-16 18:56:55 -0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2f506772] Running [ -d ~/.rvm ] as root@104.236.79.184
+ DEBUG [2f506772] Command: [ -d ~/.rvm ]
+ DEBUG [2f506772] Finished in 2.307 seconds with exit status 1 (failed).
+ DEBUG [88286737] Running [ -d /usr/local/rvm ] as root@104.236.79.184
+ DEBUG [88286737] Command: [ -d /usr/local/rvm ]
+ DEBUG [88286737] Finished in 2.338 seconds with exit status 0 (successful).
+ DEBUG [27327578] Running /usr/local/rvm/bin/rvm version as root@104.236.79.184
+ DEBUG [27327578] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [27327578] 	rvm 1.29.1 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [27327578] Finished in 2.705 seconds with exit status 0 (successful).
+ DEBUG [e3fe974a] Running /usr/local/rvm/bin/rvm current as root@104.236.79.184
+ DEBUG [e3fe974a] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [e3fe974a] 	ruby-2.3.1
+ DEBUG [e3fe974a] Finished in 2.707 seconds with exit status 0 (successful).
+ DEBUG [06820605] Running /usr/local/rvm/bin/rvm default do ruby --version as root@104.236.79.184
+ DEBUG [06820605] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [06820605] 	ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ DEBUG [06820605] Finished in 0.763 seconds with exit status 0 (successful).
+  INFO [23033a9b] Running /usr/bin/env mkdir -p /tmp as root@104.236.79.184
+ DEBUG [23033a9b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [23033a9b] Finished in 0.383 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 0.0%
+  INFO Uploading /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh 100.0%
+  INFO [6a10ea23] Running /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh as root@104.236.79.184
+ DEBUG [6a10ea23] Command: /usr/bin/env chmod 700 /tmp/git-ssh-chatlinebot-production-desenvolvimento.sh
+  INFO [6a10ea23] Finished in 0.384 seconds with exit status 0 (successful).
+  INFO [5749813c] Running /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD as root@104.236.79.184
+ DEBUG [5749813c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git ls-remote https://github.com/luizcarvalho/chatlinebot HEAD )
+ DEBUG [5749813c] 	33aaacfbebbc5773f248f05e79fa5ed9f425cc6c	HEAD
+  INFO [5749813c] Finished in 0.590 seconds with exit status 0 (successful).
+  INFO [727205c6] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases as root@104.236.79.184
+ DEBUG [727205c6] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared /var/www/chatlinebot/releases
+  INFO [727205c6] Finished in 0.381 seconds with exit status 0 (successful).
+  INFO [834b2253] Running /usr/bin/env mkdir -p /var/www/chatlinebot/shared as root@104.236.79.184
+ DEBUG [834b2253] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/shared
+  INFO [834b2253] Finished in 0.390 seconds with exit status 0 (successful).
+ DEBUG [7c867374] Running [ -f /var/www/chatlinebot/shared/.env ] as root@104.236.79.184
+ DEBUG [7c867374] Command: [ -f /var/www/chatlinebot/shared/.env ]
+ DEBUG [7c867374] Finished in 0.382 seconds with exit status 0 (successful).
+ DEBUG [33d55701] Running [ -f /var/www/chatlinebot/current/REVISION ] as root@104.236.79.184
+ DEBUG [33d55701] Command: [ -f /var/www/chatlinebot/current/REVISION ]
+ DEBUG [33d55701] Finished in 0.386 seconds with exit status 1 (failed).
+ DEBUG [aa73bcad] Running [ -f /var/www/chatlinebot/repo/HEAD ] as root@104.236.79.184
+ DEBUG [aa73bcad] Command: [ -f /var/www/chatlinebot/repo/HEAD ]
+ DEBUG [aa73bcad] Finished in 0.400 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/chatlinebot/repo
+ DEBUG [b9d34f31] Running if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi as root@104.236.79.184
+ DEBUG [b9d34f31] Command: if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi
+ DEBUG [b9d34f31] Finished in 0.382 seconds with exit status 0 (successful).
+  INFO [7241ae36] Running /usr/bin/env git remote set-url origin https://github.com/luizcarvalho/chatlinebot as root@104.236.79.184
+ DEBUG [7241ae36] Command: cd /var/www/chatlinebot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git remote set-url origin https://github.com/luizcarvalho/chatlinebot )
+  INFO [7241ae36] Finished in 0.385 seconds with exit status 0 (successful).
+  INFO [b7d6d7c3] Running /usr/bin/env git remote update --prune as root@104.236.79.184
+ DEBUG [b7d6d7c3] Command: cd /var/www/chatlinebot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b7d6d7c3] 	Fetching origin
+  INFO [b7d6d7c3] Finished in 0.681 seconds with exit status 0 (successful).
+ DEBUG [ff554e69] Running if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi as root@104.236.79.184
+ DEBUG [ff554e69] Command: if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi
+ DEBUG [ff554e69] Finished in 0.386 seconds with exit status 0 (successful).
+  INFO [e96459c5] Running /usr/bin/env mkdir -p /var/www/chatlinebot/releases/20170316215709 as root@104.236.79.184
+ DEBUG [e96459c5] Command: cd /var/www/chatlinebot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env mkdir -p /var/www/chatlinebot/releases/20170316215709 )
+  INFO [e96459c5] Finished in 0.385 seconds with exit status 0 (successful).
+  INFO [b782a56f] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/chatlinebot/releases/20170316215709 as root@104.236.79.184
+ DEBUG [b782a56f] Command: cd /var/www/chatlinebot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/chatlinebot/releases/20170316215709 )
+  INFO [b782a56f] Finished in 0.393 seconds with exit status 0 (successful).
+ DEBUG [072cd2c6] Running if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi as root@104.236.79.184
+ DEBUG [072cd2c6] Command: if test ! -d /var/www/chatlinebot/repo; then echo "Directory does not exist '/var/www/chatlinebot/repo'" 1>&2; false; fi
+ DEBUG [072cd2c6] Finished in 0.386 seconds with exit status 0 (successful).
+ DEBUG [b2bbbe79] Running /usr/bin/env git rev-list --max-count=1 master as root@104.236.79.184
+ DEBUG [b2bbbe79] Command: cd /var/www/chatlinebot/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-chatlinebot-production-desenvolvimento.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b2bbbe79] 	33aaacfbebbc5773f248f05e79fa5ed9f425cc6c
+ DEBUG [b2bbbe79] Finished in 0.384 seconds with exit status 0 (successful).
+ DEBUG [fddd6cca] Running if test ! -d /var/www/chatlinebot/releases/20170316215709; then echo "Directory does not exist '/var/www/chatlinebot/releases/20170316215709'" 1>&2; false; fi as root@104.236.79.184
+ DEBUG [fddd6cca] Command: if test ! -d /var/www/chatlinebot/releases/20170316215709; then echo "Directory does not exist '/var/www/chatlinebot/releases/20170316215709'" 1>&2; false; fi
+ DEBUG [fddd6cca] Finished in 0.383 seconds with exit status 0 (successful).
+  INFO [c1fd9a28] Running /usr/bin/env echo "33aaacfbebbc5773f248f05e79fa5ed9f425cc6c" >> REVISION as root@104.236.79.184
+ DEBUG [c1fd9a28] Command: cd /var/www/chatlinebot/releases/20170316215709 && /usr/bin/env echo "33aaacfbebbc5773f248f05e79fa5ed9f425cc6c" >> REVISION
+  INFO [c1fd9a28] Finished in 0.382 seconds with exit status 0 (successful).
+  INFO [683f144b] Running /usr/bin/env mkdir -p /var/www/chatlinebot/releases/20170316215709 as root@104.236.79.184
+ DEBUG [683f144b] Command: /usr/bin/env mkdir -p /var/www/chatlinebot/releases/20170316215709
+  INFO [683f144b] Finished in 0.388 seconds with exit status 0 (successful).
+ DEBUG [255b3f00] Running [ -L /var/www/chatlinebot/releases/20170316215709/.env ] as root@104.236.79.184
+ DEBUG [255b3f00] Command: [ -L /var/www/chatlinebot/releases/20170316215709/.env ]
+ DEBUG [255b3f00] Finished in 0.381 seconds with exit status 1 (failed).
+ DEBUG [1dbbd712] Running [ -f /var/www/chatlinebot/releases/20170316215709/.env ] as root@104.236.79.184
+ DEBUG [1dbbd712] Command: [ -f /var/www/chatlinebot/releases/20170316215709/.env ]
+ DEBUG [1dbbd712] Finished in 0.382 seconds with exit status 1 (failed).
+  INFO [c01ef267] Running /usr/bin/env ln -s /var/www/chatlinebot/shared/.env /var/www/chatlinebot/releases/20170316215709/.env as root@104.236.79.184
+ DEBUG [c01ef267] Command: /usr/bin/env ln -s /var/www/chatlinebot/shared/.env /var/www/chatlinebot/releases/20170316215709/.env
+  INFO [c01ef267] Finished in 0.381 seconds with exit status 0 (successful).
+ DEBUG [81416fa8] Running if test ! -d /var/www/chatlinebot/releases/20170316215709; then echo "Directory does not exist '/var/www/chatlinebot/releases/20170316215709'" 1>&2; false; fi as root@104.236.79.184
+ DEBUG [81416fa8] Command: if test ! -d /var/www/chatlinebot/releases/20170316215709; then echo "Directory does not exist '/var/www/chatlinebot/releases/20170316215709'" 1>&2; false; fi
+ DEBUG [81416fa8] Finished in 0.382 seconds with exit status 0 (successful).
+ DEBUG [d9cd28e6] Running /usr/local/rvm/bin/rvm default do bundle check --path /var/www/chatlinebot/shared/bundle as root@104.236.79.184
+ DEBUG [d9cd28e6] Command: cd /var/www/chatlinebot/releases/20170316215709 && /usr/local/rvm/bin/rvm default do bundle check --path /var/www/chatlinebot/shared/bundle
+ DEBUG [d9cd28e6] 	Bundler can't satisfy your Gemfile's dependencies.
+ DEBUG [d9cd28e6] 	Install missing gems with `bundle install`.
+ DEBUG [d9cd28e6] Finished in 1.013 seconds with exit status 1 (failed).
+  INFO [5a8d6b2e] Running /usr/local/rvm/bin/rvm default do bundle install --path /var/www/chatlinebot/shared/bundle --without development test --deployment --quiet as root@104.236.79.184
+ DEBUG [5a8d6b2e] Command: cd /var/www/chatlinebot/releases/20170316215709 && /usr/local/rvm/bin/rvm default do bundle install --path /var/www/chatlinebot/shared/bundle --without development test --deployment --quiet
+ DEBUG [5a8d6b2e] 	The --deployment flag requires a Gemfile.lock. Please make sure you have checked
+your Gemfile.lock into version control before deploying.
