@@ -1,0 +1,1 @@
+http://recipes.sinatrarb.com/p/deployment/apache_with_passenger
