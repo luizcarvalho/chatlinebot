@@ -9,5 +9,5 @@ get '/webhook' do
 end
 
 get '/' do
-  'Nothing to see here'
+  'LiveChatBot v1.2'
 end

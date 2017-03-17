@@ -5,30 +5,33 @@ set :application, 'chatlinebot'
 set :repo_url, 'https://github.com/luizcarvalho/chatlinebot'
 set :ssh_options, forward_agent: true
 
-# Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+namespace :deploy do
+  task :start do
+    on roles(:all) do |_host|
+      execute "touch #{deploy_to}current/tmp/restart.txt"
+    end
+  end
 
-# Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+  task :stop do
+    # Do nothing
+  end
 
-# Default value for :format is :airbrussh.
-# set :format, :airbrussh
+  desc 'Restart Application'
+  task :restart do
+    on roles(:all) do |_host|
+      execute "touch #{deploy_to}current/tmp/restart.txt"
+    end
+  end
 
-# You can configure the Airbrussh format using :format_options.
-# These are the defaults.
-# set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
+  task :finalize_update do
+    # Do nothing
+  end
 
-# Default value for :pty is false
-# set :pty, true
-
-# Default value for :linked_files is []
-# append :linked_files, "config/database.yml", "config/secrets.yml"
-
-# Default value for linked_dirs is []
-# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
-
-# Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
-
-# Default value for keep_releases is 5
-# set :keep_releases, 5
+  # task :after_deploy do
+  #  run 'cp #{current_release}/env.rb #{current_release}/env.rb-"
+  #  run "echo ENV\[\\'GEM_PATH\\'\] = \\'#{gempath}\\' + \\\":\#{ENV[\\'GEM_PATH\\']}\\\" > #{current_release}/env.rb"
+  #  run "cat #{current_release}/env.rb- >> #{current_release}/env.rb"
+  #  run "rm #{current_release}/env.rb-"
+  #  deploy::cleanup
+  # end
+end
