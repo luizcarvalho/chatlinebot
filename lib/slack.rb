@@ -14,13 +14,14 @@ class Slack
   def self.formated_data
     {
       channel: '#atendimentos',
+      icon_emoji: ':robot_face:',
       username: 'LiveChatBot',
       text: webhook_text
     }.to_json
   end
 
   def self.webhook_text
-    "Um novo usuário acaba de iniciar um atendimentos na página do Facebook. \n \
-    para acessar a <https://www.facebook.com/brunancr/messages/|área de mensagens da página>."
+    " :warning: Um novo usuário acaba de iniciar um atendimentos na página do Facebook.\
+    para visualiza-lo acesse a <https://www.facebook.com/brunancr/messages/|área de mensagens da página>."
   end
 end
