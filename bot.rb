@@ -23,7 +23,7 @@ end
 
 def welcome_message
   "Olá seja bem vindo à Brunan Comunicação e Representação. Já avisei a um de nossos \
-  atendentes que você chegou. Espera um segundinho que você já vai ser antendido 😉"
+  atendentes que você chegou. Espera um segundinho que você já vai ser atendido 😉"
 end
 
 def nobody_here
