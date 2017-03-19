@@ -3,10 +3,15 @@ require_relative '../../lib/firebase_helper'
 
 
 describe FirebaseHelper do
+
   
   before(:all) do
     @firebase = Object.new
-    @firebase.extend(FirebaseHelper)
+    @firebase.extend(FirebaseHelper)    
+  end
+
+  before(:each) do
+    stub_firebase_last 
   end
 
   let(:facebook_message) { 

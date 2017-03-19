@@ -9,6 +9,11 @@ describe Configuration do
     @firebase.extend(Configuration)
   end
 
+  before(:each) do 
+    stub_firebase_configuration
+    stub_firebase_status
+  end
+
   let(:start_support) { @firebase.start_support }
   let(:stop_support) { @firebase.stop_support }
   let(:support_active) { @firebase.support_active? }
@@ -24,11 +29,13 @@ describe Configuration do
   end
 
   it '#support_active? true when started' do
+    stub_firebase_status(true)
     start_support
     expect(support_active).to be true
   end
 
   it '#support_active? false when stoped' do
+    stub_firebase_status(false)
     stop_support
     expect(support_active).to be false
   end

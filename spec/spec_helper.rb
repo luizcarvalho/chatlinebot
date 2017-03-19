@@ -1,5 +1,14 @@
 require_relative '../config/environment'
+require 'webmock/rspec'
+require 'support/webmock_support'
 require 'pry'
+require 'dotenv/load'
+
+
+WebMock.disable_net_connect!(allow_localhost: true)
+include WebMock::API
+include WebmockSupport
+stub_facebook_access_token
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
