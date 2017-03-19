@@ -39,5 +39,4 @@ describe Configuration do
     stop_support
     expect(support_active).to be false
   end
-
 end

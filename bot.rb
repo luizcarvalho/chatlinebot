@@ -17,6 +17,7 @@ Bot.on :message do |message|
 
   message.reply(text: configuration_response) if configuration_message
 
+  puts "config? #{configuration_message} && #active? #{support_active}"
   if !configuration_message && support_active? && forward(message.messaging)
     message.reply(text: welcome_message)
   end
