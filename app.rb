@@ -9,5 +9,5 @@ get '/webhook' do
 end
 
 get '/' do
-  'LiveChatBot v1.2'
+  'LiveChatBot v1.4'
 end
