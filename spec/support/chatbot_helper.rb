@@ -1,3 +1,4 @@
+require 'pry'
 require 'facebook/messenger'
 require 'rack/test'
 
@@ -12,24 +13,33 @@ class ChatbotHelper
     @signature_header = 'X_HUB_SIGNATURE'
   end
 
-  def facebook_incoming_payload
+  def facebook_incoming_payload(options={})
     {
       'object' => 'page',
       'entry' =>
       [
         { 'id' => '0000000000000001',
-          'time' => Time.now.to_i,
+          'time' => options[:time] || Time.now.to_i,
           'messaging' =>
           [
             {
               'sender' => { 'id' => '0000000000000001' },
               'recipient' => { 'id' => '0000000000000002' },
-              'timestamp' => Time.now.to_i,
+              'timestamp' => options[:time] || Time.now.to_i,
               'message' => { 'mid' => 'mid.1:abcdef', 'seq' => 1, 'text' => @message }
             }
         ] }
       ]
     }.to_json
+  end
+
+  def change_message_times(time)
+    @payload = facebook_incoming_payload(time: time)
+    recreate_signature!
+  end
+
+  def recreate_signature!
+    @signature = signature_for(@payload)
   end
 
   # Returns a String describing its signature.

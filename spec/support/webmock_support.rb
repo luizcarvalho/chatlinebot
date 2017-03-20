@@ -29,7 +29,7 @@ module WebmockSupport
   end
 
 
-  def stub_firebase_status(status={})
+  def stub_firebase_status(status=nil)
        stub_request(:get, "https://vivochatbot.firebaseio.com/configuration/support_active.json?auth=#{ENV['FB_PRIVATE_KEY']}").
          to_return(:status => 200, :body => status.to_json, :headers => {})
   end

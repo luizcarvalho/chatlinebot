@@ -31,18 +31,38 @@ RSpec.describe 'Facebook Messenger', type: :request do
     end
 
     it 'say two messages welcome message only for first' do
-      pending
+      chatbot = ChatbotHelper.new('twice message')
+      header chatbot.signature_header, chatbot.signature
+
+      pending 'calcular tempo certinho'
+      post '/webhook', chatbot.facebook_incoming_payload
+      expect(JSON.parse(last_response.body)).to include('Já avisei a um de nossos')
+
+      post '/webhook', chatbot.facebook_incoming_payload
+      expect(JSON.parse(last_response.body)).to be nil
     end
   end
 
 
   context 'atentimento inativo' do
+    before(:each) do
+      stub_firebase_status(false)
+    end
+
     it 'say configuration command to inativar atentimento receive configuration initivar feedback' do
-      pending
+      chatbot = ChatbotHelper.new('/pausar atendimento bcr2017')
+      header chatbot.signature_header, chatbot.signature
+
+      post '/webhook', chatbot.facebook_incoming_payload
+      expect(JSON.parse(last_response.body)).to include('o atendimento está inativo')
     end
 
     it 'say anything receive take_contact answer' do
-      pending
+      chatbot = ChatbotHelper.new('hello')
+      header chatbot.signature_header, chatbot.signature
+
+      post '/webhook', chatbot.facebook_incoming_payload
+      expect(JSON.parse(last_response.body)).to include('deixe seu telefone')
     end
   end
 
