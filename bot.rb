@@ -24,15 +24,18 @@ Bot.on :message do |message|
                      nobody_here
                    end
   end
-
-  deliver(message, message_text)
+  begin
+    send_to_messenger(message, message_text)
+  rescue => e
+    puts "ERRO: #{e.message}"
+  end
 end
 
-def deliver(message, message_text)
+def send_to_messenger(message, message_text)
   Bot.deliver(
     {
       recipient: message.sender,
-      message: message_text
+      message: { text: message_text }
     },
     access_token: ENV['ACCESS_TOKEN']
   )
@@ -45,8 +48,8 @@ atendentes que você chegou. Espera um segundinho que você já vai ser atendido
 end
 
 def nobody_here
-  'Olá!! Infelizmente já encerramos nosso expediênte, mas deixe seu telefone ☎ ou celular 📱 \
-que entraremos em contato o mais rápido possível! 🚀'
+  "Olá!! Infelizmente já encerramos nosso expediênte, mas deixe seu telefone ☎ ou celular 📱 \
+que entraremos em contato o mais rápido possível! 🚀"
 end
 
 def set_welcome_message

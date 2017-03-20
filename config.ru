@@ -1,5 +1,6 @@
 require './app'
 require_relative 'bot'
+require 'rack'
 require 'pry'
 
 map('/webhook') do

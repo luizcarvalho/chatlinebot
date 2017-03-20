@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'sinatra'
+gem 'sinatra', '2.0.0.beta2'
 gem 'facebook-messenger'
 gem 'rack'
 gem 'rack-test'
