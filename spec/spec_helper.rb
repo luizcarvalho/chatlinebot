@@ -1,13 +1,30 @@
+ENV['RACK_ENV'] = 'test'
 require_relative '../config/environment'
 require 'webmock/rspec'
 require 'support/webmock_support'
-require 'pry'
+require 'support/chatbot_helper'
 require 'dotenv/load'
+
+
+
+set :environment, :test
+set :run, false
+set :raise_errors, true
+
+
+def app
+  Rack::Builder.parse_file(File.expand_path('../../config.ru', __FILE__)).first 
+end
+
+
+include Rack::Test::Methods
+include Facebook::Messenger
 
 
 WebMock.disable_net_connect!(allow_localhost: true)
 include WebMock::API
 include WebmockSupport
+
 stub_facebook_access_token
 
 RSpec.configure do |config|

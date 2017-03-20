@@ -1,5 +1,6 @@
 require_relative './firebase_helper'
-module Configuration
+
+module Config
   include FirebaseHelper
 
   def start_support

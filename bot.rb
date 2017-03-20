@@ -1,27 +1,36 @@
 require 'facebook/messenger'
 require 'json'
 require 'dotenv/load'
-require 'pry'
 require './lib/firebase_helper'
-require './lib/configuration'
+require './lib/config'
 
 include Facebook::Messenger
 include FirebaseHelper
-include Configuration
+include Config
 
 Facebook::Messenger::Subscriptions.subscribe(access_token: ENV['ACCESS_TOKEN'])
 
 Bot.on :message do |message|
-  puts message.inspect
   configuration_message = configuration_message(message.messaging)
 
   message.reply(text: configuration_response) if configuration_message
 
-  puts "config? #{configuration_message} && #active? #{support_active?}"
   # !configuration_message && support_active? &&
   if forward(message.messaging)
-    message.reply(text: welcome_message)
+    deliver(message, welcome_message)
   end
+
+  welcome_message
+end
+
+def deliver(message, message_text)
+  Bot.deliver(
+    {
+      recipient: message.sender,
+      message: message_text
+    },
+    access_token: ENV['ACCESS_TOKEN']
+  )
 end
 
 def welcome_message
