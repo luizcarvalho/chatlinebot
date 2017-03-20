@@ -23,9 +23,9 @@ module Config
 
   def configuration_message(message)
     text = message['message']['text']
-    if text =~ Regexp.new("iniciar atendimento #{ENV['password']}")
+    if text =~ Regexp.new("iniciar atendimento #{ENV['PASSWORD']}")
       start_support
-    elsif text =~ Regexp.new("pausar atendimento #{ENV['password']}")
+    elsif text =~ Regexp.new("pausar atendimento #{ENV['PASSWORD']}")
       stop_support
     else
       return false

@@ -11,16 +11,16 @@ include Config
 Facebook::Messenger::Subscriptions.subscribe(access_token: ENV['ACCESS_TOKEN'])
 
 Bot.on :message do |message|
+  message_text = nil
   configuration_message = configuration_message(message.messaging)
 
-  message.reply(text: configuration_response) if configuration_message
+  message_text = configuration_response if configuration_message
 
-  # !configuration_message && support_active? &&
-  if forward(message.messaging)
-    deliver(message, welcome_message)
+  if !configuration_message && forward(message.messaging)
+    message_text = welcome_message
   end
 
-  welcome_message
+  deliver(message, message_text)
 end
 
 def deliver(message, message_text)
@@ -31,6 +31,7 @@ def deliver(message, message_text)
     },
     access_token: ENV['ACCESS_TOKEN']
   )
+  message_text
 end
 
 def welcome_message
