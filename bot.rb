@@ -16,8 +16,13 @@ Bot.on :message do |message|
 
   message_text = configuration_response if configuration_message
 
-  if !configuration_message && forward(message.messaging)
-    message_text = welcome_message
+  unless configuration_message
+    support_active = support_active?
+    message_text = if support_active && forward(message.messaging)
+                     welcome_message
+                   elsif !support_active
+                     nobody_here
+                   end
   end
 
   deliver(message, message_text)

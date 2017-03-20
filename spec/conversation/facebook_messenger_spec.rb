@@ -1,7 +1,12 @@
 require 'spec_helper'
 RSpec.describe 'Facebook Messenger', type: :request do
+
+  let(:limit_inactive_time) { 1 }
+  let(:last_message_time) { 1 }
+  let(:now_time) { 1 }
+
   before(:each) do
-    facebook_deliver_stub    
+    facebook_deliver_stub
     stub_firebase_last
     stub_slack_webhook
     stub_firebase_create
@@ -30,13 +35,15 @@ RSpec.describe 'Facebook Messenger', type: :request do
       expect(JSON.parse(last_response.body)).to include('o atendimento está ativo')
     end
 
-    it 'say two messages welcome message only for first' do
+    it 'send message before inactive interval, dont receive answer' do
       chatbot = ChatbotHelper.new('twice message')
       header chatbot.signature_header, chatbot.signature
 
-      pending 'calcular tempo certinho'
-      post '/webhook', chatbot.facebook_incoming_payload
-      expect(JSON.parse(last_response.body)).to include('Já avisei a um de nossos')
+      module FirebaseHelper
+        def time_now
+          1
+        end
+      end
 
       post '/webhook', chatbot.facebook_incoming_payload
       expect(JSON.parse(last_response.body)).to be nil

@@ -12,9 +12,13 @@ module WebmockSupport
 
   end
 
-  def stub_firebase_last
+  def stub_firebase_last(created_at = 1)
     stub_request(:get, "https://vivochatbot.firebaseio.com/messages.json?auth=#{ENV['FB_PRIVATE_KEY']}&limitToLast=1&orderBy=%22timestamp%22").
-       to_return(:status => 200, :body => {key: {created_at: 1}}.to_json, :headers => {'Content-Type'=>'application/json'})
+       to_return(
+        :status => 200,
+        :body => {key: {created_at: created_at}}.to_json,
+        :headers => {'Content-Type'=>'application/json'}
+      )
   end
 
   def stub_firebase_create

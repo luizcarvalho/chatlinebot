@@ -3,7 +3,6 @@ require 'facebook/messenger'
 require 'rack/test'
 
 class ChatbotHelper
-  
   attr_reader :message, :signature, :signature_header, :payload
 
   def initialize(message)
@@ -13,29 +12,25 @@ class ChatbotHelper
     @signature_header = 'X_HUB_SIGNATURE'
   end
 
-  def facebook_incoming_payload(options={})
+  def facebook_incoming_payload
     {
       'object' => 'page',
       'entry' =>
       [
         { 'id' => '0000000000000001',
-          'time' => options[:time] || Time.now.to_i,
+          'time' => Time.now.to_i,
           'messaging' =>
           [
             {
               'sender' => { 'id' => '0000000000000001' },
               'recipient' => { 'id' => '0000000000000002' },
-              'timestamp' => options[:time] || Time.now.to_i,
+              'timestamp' => Time.now.to_i,
               'message' => { 'mid' => 'mid.1:abcdef', 'seq' => 1, 'text' => @message }
             }
-        ] }
+          ]
+        }
       ]
     }.to_json
-  end
-
-  def change_message_times(time)
-    @payload = facebook_incoming_payload(time: time)
-    recreate_signature!
   end
 
   def recreate_signature!
