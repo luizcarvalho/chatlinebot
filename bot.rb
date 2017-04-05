@@ -21,7 +21,11 @@ Bot.on :message do |message|
     message_text = if support_active && forward(message.messaging)
                      welcome_message
                    elsif !support_active
-                     nobody_here
+                     if message_is_a_phone?(message.messaging)
+                       ending_message
+                     else
+                       nobody_here
+                     end
                    end
   end
   begin
@@ -29,6 +33,10 @@ Bot.on :message do |message|
   rescue => e
     puts "ERRO: #{e.message}"
   end
+end
+
+def message_is_a_phone?(messaging)
+  messaging.dig('message', 'text').to_s =~ Regexp.new(/([0-9]{4})/)
 end
 
 def send_to_messenger(message, message_text)
@@ -50,6 +58,10 @@ end
 def nobody_here
   "Olá!! Infelizmente já encerramos nosso expediênte, mas deixe seu telefone ☎ ou celular 📱 \
 que entraremos em contato o mais rápido possível! 🚀"
+end
+
+def ending_message
+  'Obrigado! entraremos em contato assim que possível!'
 end
 
 def set_welcome_message
